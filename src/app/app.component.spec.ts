@@ -14,10 +14,11 @@ describe('App', () => {
     expect(app).toBeTruthy();
   });
 
-  it('should render Hello Universe', () => {
+  it('should render Hello Universe and interpolated city', () => {
     const fixture = TestBed.createComponent(App);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelector('h1')?.textContent).toContain('Hello Universe');
+    expect(compiled.querySelector('.intro')?.textContent).toContain('Hello San Francisco, 2');
   });
 });
