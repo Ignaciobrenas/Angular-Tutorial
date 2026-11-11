@@ -16,6 +16,28 @@
         <p class="status-off">No, the server is not running</p>
       }
     </section>
+
+    <section class="card card-wide">
+      <h2>Control Flow: &#64;for</h2>
+      <div class="lists-row">
+        <div>
+          <h3>Operating Systems</h3>
+          <ul class="pill-list">
+            @for (os of operatingSystems; track os.id) {
+              <li>{{ os.name }}</li>
+            }
+          </ul>
+        </div>
+        <div>
+          <h3>Users</h3>
+          <ul class="pill-list">
+            @for (user of users; track user.id) {
+              <li>{{ user.name }}</li>
+            }
+          </ul>
+        </div>
+      </div>
+    </section>
   </div>
 </main>
 

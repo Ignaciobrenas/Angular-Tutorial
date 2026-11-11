@@ -23,6 +23,12 @@ h2 {
   color: #0f172a;
 }
 
+h3 {
+  margin: 0 0 6px;
+  font-size: 0.875rem;
+  color: #475569;
+}
+
 .intro {
   margin: 0 0 16px;
   color: #334155;
@@ -40,6 +46,34 @@ h2 {
   border-radius: 8px;
   background: #ffffff;
   color: #1e293b;
+}
+
+.card-wide {
+  grid-column: span 2;
+}
+
+.lists-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.pill-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pill-list li {
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #f1f5f9;
+  color: #1e293b;
+  font-size: 0.875rem;
+  font-weight: 500;
 }
 
 .status-ok {

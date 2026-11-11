@@ -36,4 +36,23 @@ describe('App', () => {
       'No, the server is not running',
     );
   });
+
+  it('should render operating systems and users with @for', () => {
+    const fixture = TestBed.createComponent(App);
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement as HTMLElement;
+    const items = Array.from(compiled.querySelectorAll('.pill-list li')).map((li) =>
+      li.textContent?.trim(),
+    );
+    expect(items).toEqual([
+      'Windows',
+      'macOS',
+      'Linux',
+      'Sarah',
+      'Amy',
+      'Rachel',
+      'Jessica',
+      'Poornima',
+    ]);
+  });
 });
