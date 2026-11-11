@@ -2,9 +2,21 @@
   <h1>Hello Universe</h1>
   <p class="intro">Hello {{ city }}, {{ 1 + 1 }}</p>
 
-  <section class="section-block">
-    <app-user />
-  </section>
+  <div class="cards-grid">
+    <section class="card">
+      <h2>Component Composition</h2>
+      <app-user />
+    </section>
+
+    <section class="card">
+      <h2>Control Flow: &#64;if</h2>
+      @if (isServerRunning) {
+        <p class="status-ok">Yes, the server is running</p>
+      } @else {
+        <p class="status-off">No, the server is not running</p>
+      }
+    </section>
+  </div>
 </main>
 
 <router-outlet />

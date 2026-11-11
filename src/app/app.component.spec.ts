@@ -21,4 +21,19 @@ describe('App', () => {
     expect(compiled.querySelector('h1')?.textContent).toContain('Hello Universe');
     expect(compiled.querySelector('.intro')?.textContent).toContain('Hello San Francisco, 2');
   });
+
+  it('should render conditional server status with @if and @else', () => {
+    const fixtureTrue = TestBed.createComponent(App);
+    fixtureTrue.detectChanges();
+    expect((fixtureTrue.nativeElement as HTMLElement).textContent).toContain(
+      'Yes, the server is running',
+    );
+
+    const fixtureFalse = TestBed.createComponent(App);
+    fixtureFalse.componentInstance.isServerRunning = false;
+    fixtureFalse.detectChanges();
+    expect((fixtureFalse.nativeElement as HTMLElement).textContent).toContain(
+      'No, the server is not running',
+    );
+  });
 });
