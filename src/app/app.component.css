@@ -13,6 +13,15 @@
 }
 
 h1 {
-  margin: 0 0 10px;
+  margin: 0 0 8px;
   font-size: 1.75rem;
+}
+
+.intro {
+  margin: 0 0 16px;
+  color: #334155;
+}
+
+.section-block {
+  margin-top: 12px;
 }
