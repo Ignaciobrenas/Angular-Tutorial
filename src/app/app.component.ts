@@ -11,6 +11,7 @@ import { User } from './user/user.component';
 export class App {
   city = 'San Francisco';
   isServerRunning = true;
+  isEditable = true;
 
   operatingSystems = [
     { id: 'win', name: 'Windows' },

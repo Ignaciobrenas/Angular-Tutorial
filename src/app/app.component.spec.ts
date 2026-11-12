@@ -55,4 +55,13 @@ describe('App', () => {
       'Poornima',
     ]);
   });
+
+  it('should bind contentEditable via property binding', () => {
+    const fixture = TestBed.createComponent(App);
+    fixture.detectChanges();
+    const box = (fixture.nativeElement as HTMLElement).querySelector(
+      '.editable-box',
+    ) as HTMLElement;
+    expect(String(box.contentEditable)).toBe('true');
+  });
 });
