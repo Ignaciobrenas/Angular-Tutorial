@@ -3,10 +3,50 @@
   display: block;
 }
 
+.navbar {
+  max-width: 960px;
+  margin: 14px auto 0;
+  padding: 10px 20px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #0f172a;
+}
+
+.brand {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #a144eb;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #94a3b8;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #334155;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+.nav-links a:hover {
+  background: #f3e8ff;
+  color: #7e22ce;
+}
+
 .tutorial-container {
   max-width: 960px;
-  margin: 20px auto;
-  padding: 20px 24px;
+  margin: 12px auto 20px;
+  padding: 18px 24px;
   background: #ffffff;
   border: 1px solid #e2e8f0;
   border-radius: 10px;

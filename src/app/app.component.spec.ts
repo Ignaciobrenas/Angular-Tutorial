@@ -80,4 +80,16 @@ describe('App', () => {
     fixture.detectChanges();
     expect(compiled.querySelector('.event-message')?.textContent).toContain('Way to go');
   });
+
+  it('should render navigation links for Home and User', () => {
+    const fixture = TestBed.createComponent(App);
+    fixture.detectChanges();
+    const links = Array.from((fixture.nativeElement as HTMLElement).querySelectorAll('nav a')).map(
+      (a) => ({ text: a.textContent?.trim(), href: a.getAttribute('href') }),
+    );
+    expect(links).toEqual([
+      { text: 'Home', href: '/' },
+      { text: 'User', href: '/user' },
+    ]);
+  });
 });
