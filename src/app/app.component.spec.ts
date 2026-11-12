@@ -64,4 +64,20 @@ describe('App', () => {
     ) as HTMLElement;
     expect(String(box.contentEditable)).toBe('true');
   });
+
+  it('should handle click and mouseover events', () => {
+    const fixture = TestBed.createComponent(App);
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement as HTMLElement;
+
+    const greetBtn = compiled.querySelector('.btn-primary') as HTMLButtonElement;
+    greetBtn.click();
+    fixture.detectChanges();
+    expect(compiled.querySelector('.event-message')?.textContent).toContain('Hello, there');
+
+    const eventCard = compiled.querySelector('.event-card') as HTMLElement;
+    eventCard.dispatchEvent(new MouseEvent('mouseover'));
+    fixture.detectChanges();
+    expect(compiled.querySelector('.event-message')?.textContent).toContain('Way to go');
+  });
 });

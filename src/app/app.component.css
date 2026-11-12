@@ -102,3 +102,42 @@ h3 {
   border-color: transparent;
   background: #ffffff;
 }
+
+.hint {
+  margin: 0 0 10px;
+  font-size: 0.875rem;
+  color: #475569;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.btn-primary {
+  background: #a144eb;
+  color: #ffffff;
+}
+
+.btn-secondary {
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+  color: #1e293b;
+}
+
+.event-message {
+  margin: 10px 0 0;
+  font-weight: 600;
+  color: #7e22ce;
+}

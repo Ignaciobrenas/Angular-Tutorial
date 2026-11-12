@@ -12,6 +12,7 @@ export class App {
   city = 'San Francisco';
   isServerRunning = true;
   isEditable = true;
+  message = '';
 
   operatingSystems = [
     { id: 'win', name: 'Windows' },
@@ -26,4 +27,16 @@ export class App {
     { id: 3, name: 'Jessica' },
     { id: 4, name: 'Poornima' },
   ];
+
+  greet() {
+    this.message = 'Hello, there 👋';
+  }
+
+  showSecretMessage() {
+    this.message = 'Way to go 🚀';
+  }
+
+  toggleServer() {
+    this.isServerRunning = !this.isServerRunning;
+  }
 }

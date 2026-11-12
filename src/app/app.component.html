@@ -45,6 +45,18 @@
         Editable text — click here to edit
       </div>
     </section>
+
+    <section class="card event-card" (mouseover)="showSecretMessage()">
+      <h2>Event Handling</h2>
+      <p class="hint">Hover over this box or click a button:</p>
+      <div class="actions">
+        <button type="button" class="btn-primary" (click)="greet()">Greet</button>
+        <button type="button" class="btn-secondary" (click)="toggleServer()">Toggle Server</button>
+      </div>
+      @if (message) {
+        <p class="event-message">{{ message }}</p>
+      }
+    </section>
   </div>
 </main>
 
