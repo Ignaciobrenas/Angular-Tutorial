@@ -1,9 +1,11 @@
 <nav class="navbar">
   <span class="brand">Angular Tutorial</span>
   <div class="nav-links">
-    <a href="/">Home</a>
+    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+      Home
+    </a>
     <span aria-hidden="true">|</span>
-    <a href="/user">User</a>
+    <a routerLink="/user" routerLinkActive="active">User</a>
   </div>
 </nav>
 

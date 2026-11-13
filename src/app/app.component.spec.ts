@@ -1,5 +1,5 @@
 import { TestBed } from '@angular/core/testing';
-import { provideRouter } from '@angular/router';
+import { provideRouter, Router } from '@angular/router';
 import { App } from './app.component';
 import { routes } from './app.routes';
 
@@ -26,5 +26,24 @@ describe('App', () => {
       { text: 'Home', href: '/' },
       { text: 'User', href: '/user' },
     ]);
+  });
+
+  it('should navigate between Home and User via RouterLink without reload', async () => {
+    const fixture = TestBed.createComponent(App);
+    const router = TestBed.inject(Router);
+    router.initialNavigation();
+    await fixture.whenStable();
+    fixture.detectChanges();
+
+    const compiled = fixture.nativeElement as HTMLElement;
+    expect(compiled.querySelector('h1')?.textContent).toContain('Hello Universe');
+
+    const userLink = compiled.querySelector('a[routerLink="/user"]') as HTMLAnchorElement;
+    userLink.click();
+    await fixture.whenStable();
+    fixture.detectChanges();
+
+    expect(router.url).toBe('/user');
+    expect(compiled.textContent).toContain('youngTech');
   });
 });
